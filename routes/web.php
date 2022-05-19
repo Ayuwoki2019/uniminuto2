@@ -13,13 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::post('/importListExcel', 'HomeController@import')->name('usersImportExcel');
+Route::get('/studentList', 'HomeController@studentList');
 
 
 /*Route::get('/inicio', function () {

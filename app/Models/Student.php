@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     protected $fillable = [
-        'nombres', 'apellidos', 'cod_estudiante', 'estado'
+        'name', 'lastname', 'cod_student', 'status'
     ];
 
     public function semeters(){

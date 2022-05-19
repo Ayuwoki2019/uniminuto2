@@ -15,7 +15,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('cod_student')->unique();
+            $table->string('cod_student')->unique();
             $table->string('name');
             $table->string('lastname');
             $table->enum('status', ['Continuo', 'Ausente', 'Desertor']);
